@@ -9,7 +9,7 @@ p, span {
   overflow:scroll;
 }
 p, a, span {
-  font-size:1rem;
+  font-size:1.25rem;
 }
 .ptext p {
   text-align:center;
@@ -55,7 +55,7 @@ p, a, span {
   color:#0000EE;
 }
 .notfound {
-  font-size:min(100px);
+  font-size:5rem
 }
 hr {
   border:solid 1px;
