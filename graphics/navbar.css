@@ -1,0 +1,208 @@
+.navbar {
+  height:6%;
+  min-height:64px;
+  max-height:78px;
+  border:solid 3px;
+  border-bottom-left-radius:16px;
+  width:calc(100% - 6px);
+  display:table;
+  position:fixed;
+  display:flex;
+  align-items:center;
+  right:0;
+  z-index:999;
+}
+#hamburger {
+  width: 2.5em;
+  height:2.5em;
+  margin-left:auto;
+  vertical-align:middle;
+  font-size:20;
+  border:solid 3px;
+  border-radius:4px;
+  margin-right:20px;
+  outline:none;
+}
+#mbtext {
+  display:table-cell;
+  vertical-align: middle;
+  font-weight:1000;
+  font-size:125%;
+  padding-left:20;
+  outline:none;
+}
+#logo {
+  width:2.5em;
+  height:2.5em;
+  margin-left:5px;
+  display:block;
+  background: url(../img/logo.png) repeat 0 0;
+  background-size: cover;
+}
+.unknown {
+  display:hidden;
+}
+.fakebr {
+  height:6%;
+  min-height:64px;
+  max-height:78px;
+  width:100%;
+}
+.unknown {
+  display:none;
+}
+.navmenu {
+  overflow:scroll;
+  width:45%;
+  height:45%;
+  display:block;
+  min-height:150px;
+  max-width:400px;
+  max-height:650px;
+  position:fixed;
+  border:solid 3px;
+  border-bottom-left-radius:32px;
+  margin-top:3.5px;
+  align-items:center;
+  justify-content:center;
+  right:0;
+  animation-name: menustart;
+  animation-duration:1s;
+  z-index:100;
+}
+.navmenu a {
+  width:85%;
+  height:calc(3.5vh + 8vw);
+  font-size:clamp(16px, 4vw, 32px);
+  font-weight:1000;
+  max-height:75px;
+  display:flex;
+  color:white;
+  border:solid 3px;
+  border-radius:4px;
+  background:none;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-weight:1000;
+}
+.navmenu p {
+  font-weight: 1000;
+  text-align: center;
+}
+.navmenu hr {
+  border:none;
+  background:none;
+  height:4px;
+}
+.navmenu .top {
+  width:97%;
+  height:12%;
+  min-height:48px;
+  position:relative;
+  display:flex;
+  margin-top:1.5%;
+  border-radius:6px;
+  align-items:center;
+}
+.navmenu .top p {
+  font-size:calc(4vw/4vh);
+  width:100%;
+  vertical-align:middle;
+}
+.hiddenmenu {
+  animation-name: menustop;
+  animation-duration:1s;
+}
+@keyframes menustart {
+  from {
+    opacity:0;
+    margin-right:-100%;
+  }
+  to {
+    opacity:1;
+  }
+}
+@keyframes menustop {
+  from {
+    opacity:1;
+  }
+  to {
+    margin-right:-100%;
+    opacity:0;
+  }
+}
+.sccontainer {
+  height:100%;
+  width:35vw;
+  max-width:400px;
+  border:solid 3px;
+  border-radius:16px;
+  margin-left:auto;
+  margin-right:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.sccontainer a {
+  width:5em;
+  height:2.5em;
+  font-size:20;
+  display:inline-block;
+  color:white;
+  background:transparent;
+  border:solid 3px;
+  border-radius:4px;
+  margin-left:auto;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-weight:1000;
+}
+@media (max-width: 600px) {
+  .sccontainer {
+  display:none;
+  }
+}
+@media (max-height: 250px) {
+  .navbar {
+    max-height:32px;
+  }
+  #navmenu {
+    height:50%;
+  }
+  
+}
+@media (min-width: 700px) {
+  #mbtext {
+    font-size:175%;
+}
+  #logo {
+    width:3.5em;
+    height:3.5em;
+  }
+}
+
+@media (min-width: 800px) {
+  .navmenu {
+    width:35%;
+    height:30%;
+}
+  .navmenu a {
+    font-size:200%;
+    width:90%;
+}
+  .navmenu p {
+    font-size:145%;
+}
+  .hiddenmenu {
+    width:35%;
+    height:30%;
+}
+  .hiddenmenu a {
+    font-size:200%;
+    width:90%;
+}
+  .hiddenmenu p {
+    font-size:145%;
+}}

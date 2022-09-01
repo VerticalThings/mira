@@ -1,0 +1,97 @@
+* {
+  opacity:0;
+}
+p, span {
+  font-weight:500;
+}
+.ptext {
+  margin-top:1%;
+  overflow:scroll;
+}
+p, a, span {
+  font-size:1rem;
+}
+.ptext p {
+  text-align:center;
+}
+.ptext select {
+  width:78%;
+  height:calc(1vh + 4vw);
+  min-height:48px;
+  max-height:100px;
+  max-width:600px;
+  font-size:clamp(16px, 4vw, 32px);
+  font-weight:1000;
+  background:transparent;
+  outline:none;
+}
+.ptext input {
+  width:78%;
+  height:calc(1vh + 4vw);
+  min-height:48px;
+  max-height:100px;
+  max-width:600px;
+  font-size:clamp(16px, 4vw, 32px);
+  font-weight:1000;
+  background:transparent;
+  outline:none;
+}
+.ptext button {
+  width: 48%;
+  height:calc(3.5vh + 8vw);
+  font-size:clamp(16px, 4vw, 32px);
+  font-weight:1000;
+  max-width:175px;
+  max-height:75px;
+}
+.ptitle {
+  font-weight: 1000;
+  font-size: 125%;
+  text-align:center;
+}
+
+.ptext a {
+  font-weight:1000;
+  color:#0000EE;
+}
+.notfound {
+  font-size:min(100px);
+}
+hr {
+  border:solid 1px;
+}
+#passcheck {
+  width:78%;
+  max-width:450px;
+  text-align:left;
+}
+.checkcontainer {
+  background: url("../img/check-false.png") no-repeat;
+  display: inline-block;
+  background-size:1.5em 1.5em;
+  height:1.5em;
+  padding-left:1.875em;
+}
+.checkcontainer span {
+    height:1.5em;
+    display:table-cell;
+    vertical-align:middle;
+}
+.ptext a:active {
+  background:lightblue;
+}
+.ptext input:placeholder-shown {
+  text-overflow:ellipsis;
+}
+@media (max-width: 600px) {
+  
+}
+
+@media (min-width: 600px) {
+  .ptitle {
+      font-size:2rem
+}
+  p, a, span {
+    font-size:2rem
+}
+}

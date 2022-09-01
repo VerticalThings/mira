@@ -1,0 +1,78 @@
+* {
+  opacity:1;
+}
+body {
+  background:#FFFFFF;
+}
+.selectdiv {
+  background:#FF3030;
+  border:solid 3px #BE2323;
+}
+.selectdiv p {
+  color:white;
+}
+.selectdiv button {
+  color:white;
+  background:#BE2323;
+}
+.invertdiv {
+  background:#FFFFFF;
+  border:solid 3px #BE3030;
+}
+.invertdiv p {
+  color:#FF3030
+}
+.invertdiv a {
+  color:#BE3030;
+  border:solid 3px #BE3030;
+}
+#navmenu .top {
+  background:#FF3030;
+}
+#navmenu .top p {
+  color:white;
+}
+.sccontainer {
+  border:solid 12px #BE3030;
+  border-top:none;
+  border-bottom:none;
+}
+button {
+  background:white;
+  border:#FF3030;
+  color:#FF3030;
+}
+a {
+  background:white;
+  border:#FF3030;
+  color:#FF3030;
+}
+p, span {
+  color:#FF3030;
+  font-weight:1000;
+}
+.ptext select {
+  border:solid 3px #FF3030;
+  border-radius:8px;
+  color:#FF3030;
+}
+.ptext input {
+  border:solid 3px #FF3030;
+  border-radius:8px;
+  color:#FF3030;
+}
+.ptext input::placeholder {
+  color:#FF8888;
+}
+.ptext button {
+  border:solid 3px #FF3030;
+  border-radius:8px;
+  color:#FF3030;
+}
+hr {
+  background-color:#BE2323;
+  border:solid 1px #BE2323;
+}
+button:active {
+  background-color: #DB8585;
+}

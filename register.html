@@ -1,0 +1,58 @@
+<head>
+<link rel="stylesheet" href="./graphics/text.css">
+
+<link rel="stylesheet" href="./graphics/others.css">
+
+<link rel="stylesheet" href="./graphics/navbar.css">
+
+<link rel="stylesheet" id="themestylesheet">
+<title>Mira</title>
+<meta property="og:title" content="Mira Market - Settings" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://miramarket.ban.app/" />
+<meta property="og:image" content="https://raw.githubusercontent.com/VerticalThings/mira/main/embed.png" />
+<meta property="og:description" content="Best Mini-Market in lebanon 🇱🇧!" />
+<meta name="theme-color" content="#FF5050">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body id="bodyid">
+<main id="swup" class="transition-fade">
+<b id="pageisregister"></b>
+<br>
+<div class="ptext">
+  <p class="ptitle">Register</p>
+  <br><hr><br>
+  <center>
+   <form id="registform" action="http://127.0.0.1:5000/miramarket/api/register" method="POST">
+  <input type="text" placeholder="Email (user@example.com)" name="email" value="example@gmail.com"><br><br>
+  <input type="text" placeholder="Username" name="username" value="VerticalThings"><br><br>
+  <input type="password" placeholder="Password" name="password" value="dy788798"><br><br>
+  <input type="hidden" value="0481613180107414" name="lowverify">
+  </form>
+  <div id="passcheck">
+  <span>Password Requirements:</span><br><br>
+  <span class="checkcontainer"><span>Has 8+ characters</span></span><br><br>
+  <span class="checkcontainer"><span>Has atleast 1 number</span></span>
+  </div>
+  <br><br><hr><br><br>
+  <input form="registform" type="submit" value="Register">
+  <br><br><p>Already have an account?</p><br><a href="/login.html">Login Instead</a>
+  </center>
+ <br>
+</div>
+</main>
+</body>
+
+<script type="text/javascript" src="./scripts/navmenu.js"></script>
+
+<script type="text/javascript" src="./scripts/navload.js"></script>
+
+<script type="text/javascript" src="./scripts/theme.js"></script>
+
+<script type="text/javascript" src="./scripts/swup.min.js"></script>
+
+<script type="text/javascript" src="./scripts/swup-setup.js"></script>
