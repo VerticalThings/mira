@@ -1,15 +1,12 @@
 * {
   opacity:0;
 }
-p, span {
-  font-weight:500;
-}
 .ptext {
-  margin-top:1%;
   overflow:scroll;
 }
 p, a, span {
   font-size:1.25rem;
+  font-weight:500;
 }
 .ptext p {
   text-align:center;
