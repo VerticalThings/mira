@@ -1,5 +1,6 @@
 from flask import Flask, redirect, url_for, request;
 import json;
+import socket
 from cryptography.fernet import Fernet;
 app = Flask(__name__);
 
@@ -14,4 +15,4 @@ def signup():
     else:
     	pass
     return postedform
-app.run();
+app.run(host="0.0.0.0");
