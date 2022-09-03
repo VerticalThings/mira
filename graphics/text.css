@@ -54,9 +54,19 @@ p, a, span {
 .notfound {
   font-size:5rem
 }
+.notfound span {
+  font-size:5rem;
+}
+.flicker {
+  animation:flicker 3s infinite;
+}
+.flicker2 {
+  animation:flicker2 3s infinite;
+}
 hr {
   border:solid 1px;
 }
+
 #passcheck {
   width:78%;
   max-width:450px;
@@ -79,6 +89,33 @@ hr {
 }
 .ptext input:placeholder-shown {
   text-overflow:ellipsis;
+}
+@keyframes flicker {
+  10% {opacity:0.85;}
+  15% {opacity:0.9;}
+  20% {opacity:0.6;}
+  21% {opacity:1;}
+  27% {opacity:0.75;}
+  35% {opacity:1;}
+  40% {opacity:0.5;}
+  60% {opacity:0.5;}
+  61% {opacity:0.7;}
+  67% {opacity:0.2;}
+  74% {opacity:0.8;}
+  85% {opacity:0.85;}
+  86% {opacity:0.2;}
+  95% {opacity:1;}
+}
+@keyframes flicker2 {
+  40% {opacity:1;}
+  41% {opacity:0.5;}
+  45% {opacity:1;}
+  80% {opacity:1;}
+  81% {opacity:0.2;}
+  85% {opacity:1;}
+  95% {opacity:1;}
+  96% {opacity:0.35;}
+  100% {opacity:1;}
 }
 @media (max-width: 600px) {
   
