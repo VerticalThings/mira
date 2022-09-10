@@ -1,3 +1,6 @@
 const swup = new Swup()
-swup.on('contentReplaced', checkDone);
-
+swup.on('contentReplaced', function() {
+  checkDone();
+  checkAllowed();
+  noerror("all");
+})

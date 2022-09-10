@@ -1,5 +1,5 @@
-<head>
-
+  <head>
+  
 <link rel="stylesheet" href="./graphics/text.css">
 
 <link rel="stylesheet" href="./graphics/others.css">
@@ -7,6 +7,9 @@
 <link rel="stylesheet" href="./graphics/navbar.css">
 
 <link rel="stylesheet" id="themestylesheet">
+
+<link rel="stylesheet" href="./graphics/notifications.css">
+
 <title>Mira</title>
 <meta property="og:title" content="Mira Market" />
 <meta property="og:type" content="website" />
@@ -25,19 +28,24 @@
 <main id="swup" class="transition-fade">
 <br>
 <div class="ptext">
-<p class="ptitle">Website for our shop.</p>
+<p class="ptitle" id="welcome">Welcome!</p>
 <br><hr><br>
-<p>Welcome, this is Mira Market's official website!<br><br>Upcoming Features:</p>
-<br>
-<p>• 🛒 Shop from Mira online<br>• 💳 Alternative Payments<br>• 💬 Suggest Items/Food</p>
-<br><hr><br>
-<p>Please login or register to use our services.</p>
+<p>
+  This is the official website for Mini Market Mira
+  <br><br> Please <a href="/register.html">Register</a> an account to get more access to our website
+</p><br>
+<center>
+<button onclick="notify('Notification', 'Oreo Mcflurry')">Preview Notification</button>
+</center>
 </div>
 </body>
-
 <script type="text/javascript" src="./scripts/navmenu.js"></script>
 
 <script type="text/javascript" src="./scripts/navload.js"></script>
+
+<script type="text/javascript" src="/scripts/account.js"></script>
+
+<script type="text/javascript" src="/scripts/notifications.js"></script>
 
 <script type="text/javascript" src="./scripts/theme.js"></script>
 

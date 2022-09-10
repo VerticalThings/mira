@@ -1,0 +1,59 @@
+.notification {
+  position:fixed;
+  width:90%;
+  height:20vh;
+  bottom:2vh;
+  margin-left:100%;
+  min-height:128px;
+  max-height:200px;
+  max-width:650px;
+  border-radius:4px;
+  border:solid 3px;
+  background:white;
+  position:fixed;
+  transition:margin-left ease-in;
+  transition-duration:1s;
+  z-index:101;
+}
+.notification.closing {
+  left:50%;
+  transform: translate(-50%, 0);
+  margin-left:100%;
+  transition:all 0.5s ease-in;
+}
+.notification.opening {
+  margin-left:0;
+  transition:all 0.5s ease-in;
+  left:50%;
+  transform: translate(-50%, 0);
+}
+.notification p {
+  margin:0.45em;
+  color:black;
+}
+.notification button {
+  position:absolute;
+  background:red;
+  width:2.45em;
+  height:2.45em;
+  right:0;
+  border-radius:4px;
+}
+.progressdiv {
+  background:grey;
+  position:absolute;
+  bottom:0;
+  left:5.1%;
+  width:90%;
+  height:16px;
+}
+.progressdiv div {
+  background:darkslateblue;
+  height:16px;
+  width:1%;
+  left:0;
+}
+.progressdiv div.start {
+  transition:all 5s ease-in;
+  width:100%;
+}

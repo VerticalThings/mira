@@ -16,7 +16,7 @@ var checkNav = function() {
 }
 const interv = setInterval(checkNav, 1)
 async function togglemenuon() {
-  document.getElementById("hamburger").innerText = "X"
+  document.getElementById("hamburger").innerText = "✖"
   menu.className = "navmenu invertdiv"
 }
 

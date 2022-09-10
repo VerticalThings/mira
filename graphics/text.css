@@ -1,19 +1,25 @@
 * {
   opacity:0;
 }
+button {
+  outline:none;
+}
 .ptext {
   overflow:scroll;
 }
 p, a, span {
-  font-size:1.25rem;
-  font-weight:500;
+  font-weight:400;
+  text-size:100%
+}
+label {
+  font-weight:400;
 }
 .ptext p {
   text-align:center;
 }
 .ptext select {
   width:78%;
-  height:calc(1vh + 4vw);
+  height:calc(4vh + 4vw);
   min-height:48px;
   max-height:100px;
   max-width:600px;
@@ -24,38 +30,67 @@ p, a, span {
 }
 .ptext input {
   width:78%;
-  height:calc(1vh + 4vw);
+  height:4rem;
   min-height:48px;
   max-height:100px;
-  max-width:600px;
-  font-size:clamp(16px, 4vw, 32px);
+  max-width:450px;
+  font-size:clamp(16px, 2vw, 32px);
   font-weight:1000;
   background:transparent;
   outline:none;
+  cursor:pointer;
+  text-overflow:ellipsis;
+}
+input, label {
+  display:block;
+}
+.check {
+  background: url("../img/check-false.png") no-repeat;
+  display: inline-block;
+  background-size:1.5em 1.5em;
+  height:1.5em;
+  padding-left:1.5em;
+  margin-left:0.35em;
+}
+.checksize {
+  display: inline-block;
+  background-size:1.5em 1.5em;
+  height:1.5em;
+  text-align:left;
+}
+.checksize span {
+  height:1.5em;
+  display:table-cell;
+  vertical-align:middle;
+}
+.checktrue {
+  background: url("../img/check-true.png") no-repeat;
+  display: inline-block;
+  background-size:1.5em 1.5em;
 }
 .ptext button {
   width: 48%;
   height:calc(3.5vh + 8vw);
-  font-size:clamp(16px, 4vw, 32px);
   font-weight:1000;
   max-width:175px;
   max-height:75px;
+  text-overflow:ellipsis;
 }
 .ptitle {
   font-weight: 1000;
   font-size: 125%;
   text-align:center;
 }
-
 .ptext a {
   font-weight:1000;
-  color:#0000EE;
 }
 .notfound {
-  font-size:5rem
+  font-size:5rem;
+  text-shadow:0 0 1.5rem;
 }
 .notfound span {
   font-size:5rem;
+  text-shadow:0 0 1.5rem;
 }
 .flicker {
   animation:flicker 3s infinite;
@@ -66,28 +101,86 @@ p, a, span {
 hr {
   border:solid 1px;
 }
-
-#passcheck {
+.containcheck {
   width:78%;
   max-width:450px;
   text-align:left;
 }
-.checkcontainer {
-  background: url("../img/check-false.png") no-repeat;
-  display: inline-block;
+.containcheck2 {
+  width:80%;
+  max-width:460px;
+  height:0;
+  text-align:left;
+  transition:all 0.5s ease-in;
+  border:solid 3px;
+  border-bottom-left-radius:4px;
+  border-bottom-right-radius:4px;
+  border-top:none;
+  vertical-align:middle;
+  align-items:center;
+  justify-content: center;
+  overflow:hidden;
+}
+.containcheck2.started {
+  height:120px;
+  transition:height 0.5s ease-in;
+  overflow:scroll;
+}
+.noncheck {
+  background: url("../img/ucheck-false.png") no-repeat;
+  display:inline-block;
   background-size:1.5em 1.5em;
   height:1.5em;
   padding-left:1.875em;
 }
-.checkcontainer span {
-    height:1.5em;
-    display:table-cell;
-    vertical-align:middle;
+.noncheck span {
+  height:1.5em;
+  display:table-cell;
+  vertical-align:middle;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+.nchecktrue {
+  background: url("../img/ucheck-true.png") no-repeat;
+  display: inline-block;
+  background-size:1.5em 1.5em;
+  height:1.5em;
+}
+.dropdown {
+  display:flex;
+  align-items:center;
+  width:80%;
+  max-width:460px;
+  border:solid 3px;
+  border-top-left-radius:4px;
+  border-top-right-radius:4px;
+  height:3.5rem;
+  min-height:48px;
+  max-height:90px;
+  text-align:left;
+}
+.dropdown span {
+  display:table-cell;
+  vertical-align:middle;
+  font-size:1rem;
+}
+.dropdown button {
+  height:90%;
+  width:12vw;
+  min-width:48px;
+  max-width:100px;
+  padding-right:-100%;
+  vertical-align:middle;
+  margin-left:auto;
+  margin-right:0.35em;
+}
+.soft {
+  font-weight:400;
 }
 .ptext a:active {
   background:lightblue;
 }
-.ptext input:placeholder-shown {
+.ptext input:placeholder-sown {
   text-overflow:ellipsis;
 }
 @keyframes flicker {
@@ -125,7 +218,7 @@ hr {
   .ptitle {
       font-size:2rem
 }
-  p, a, span {
-    font-size:2rem
 }
+input:disabled {
+  opacity:0.5;
 }

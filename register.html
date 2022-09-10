@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="./graphics/navbar.css">
 
 <link rel="stylesheet" id="themestylesheet">
+
+<link rel="stylesheet" href="./graphics/notifications.css">
 <title>Mira</title>
 <meta property="og:title" content="Mira Market - Register" />
 <meta property="og:type" content="website" />
@@ -26,20 +28,59 @@
 <div class="ptext">
   <p class="ptitle">Register</p>
   <br><hr><br>
+  <iframe id="postframe" name="post" hidden></iframe>
   <center>
-   <form id="registform" action="http://127.0.0.1:5000/miramarket/api/register" method="POST">
-  <input type="text" placeholder="Email (user@example.com)" name="email" value="example@gmail.com"><br><br>
-  <input type="text" placeholder="Username" name="username" value="VerticalThings"><br><br>
-  <input type="password" placeholder="Password" name="password" value="examplepassword"><br><br>
+   <form id="registform" action="http://127.0.0.1:5000/miramarket/api/register" method="POST" target="post">
+  <label for="email" class="error" id="emailerror">Error: Invalid Email</label>
+  <input type="text" placeholder="Email (user@example.com)" name="email"><br style="clear:both;">
+  <label for="username" class="error" id="usernameerror">Error: Invalid Username</label>
+  <input type="text" placeholder="Username" name="username" id="username" onchange="checkAllowed();"
+onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"><br style="clear:both;">
+    <label for="password" class="error" id="passworderror">Error: Invalid Password</label>
+  <input type="password" placeholder="Password" name="password" id="password" onchange="checkAllowed();"
+onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/><br>
+  <div class="containcheck">
+  <span class="checksize">
+  <span class="check" id="showpass" onclick="TogglePassword();"></span>
+  <span style="padding-left:0.35em;">Show Password</span>
+  </div>
+  <br>
+  <div class="containcheck">
+  <span class="checksize">
+  <span class="check" id="toscheck" onclick="ToggleTOS(); checkAllowed()"></span>
+  <span style="padding-left:0.35em;">I Will Follow The <a href="/terms.html">Terms</a></span>
+  </div>
+  <br>
   <input type="hidden" value="0481613180107414" name="lowverify">
   </form>
-  <div id="passcheck">
-  <span>Password Requirements:</span><br><br>
-  <span class="checkcontainer"><span>Has 8+ characters</span></span><br><br>
-  <span class="checkcontainer"><span>Has atleast 1 number</span></span>
+  
+  <div class="dropdown" onclick="ToggleDropdown('passcheck', 'showpassreq')" style="border-radius:0px;"><span>Password Requirements</span>
+  <button id="showpassreq">▼</button>
   </div>
+  
+  <div id="passcheck" class="containcheck2">
+  <div style="margin:8px">
+  <span class="noncheck" id="passlencheck"><span> ▸ Has 8+ characters ◂</span>
+  </span><br><br> 
+  <span class="noncheck" id="passlenchecklong"><span> ▸ Has <64 characters◂</span></span><br><br>
+  <span class="noncheck" id="passcheckspecial"><span> ▸ Has a Special character And No Spaces ◂</span></span>
+  </div></div>
+  <br>
+  <div class="dropdown" onclick="ToggleDropdown('usercheck', 'shownamereq')" style="border-radius:0px;"><span>Username Requirements</span>
+  <button id="shownamereq">▼</button>
+  </div>
+  <div id="usercheck" class="containcheck2">
+  <div style="margin:8px">
+  <span class="noncheck" id="usrlencheck"><span> ▸ Has 4+ characters ◂</span>
+  </span><br><br> 
+  <span class="noncheck" id="usrlenchecklong"><span> ▸ Has <24 Characters ◂</span></span><br><br>
+  <span class="noncheck" id="userspecialcheck"><span> ▸ Has no Special Characters ◂</span></span>
+  </div></div>
+  <br>
+
+  <br>
   <br><br><hr><br><br>
-  <input form="registform" type="submit" value="Register">
+  <input form="registform" type="submit" value="Register" id="register" disabled>
   <br><br><p>Already have an account?</p><br><a href="/login.html">Login Instead</a>
   </center>
  <br>
@@ -47,12 +88,16 @@
 </main>
 </body>
 
-<script type="text/javascript" src="./scripts/navmenu.js"></script>
+<script type="text/javascript" src="/scripts/navmenu.js"></script>
 
-<script type="text/javascript" src="./scripts/navload.js"></script>
+<script type="text/javascript" src="/scripts/navload.js"></script>
 
-<script type="text/javascript" src="./scripts/theme.js"></script>
+<script type="text/javascript" src="/scripts/theme.js"></script>
 
-<script type="text/javascript" src="./scripts/swup.min.js"></script>
+<script type="text/javascript" src="/scripts/account.js"></script>
 
-<script type="text/javascript" src="./scripts/swup-setup.js"></script>
+<script type="text/javascript" src="/scripts/notifications.js"></script>
+
+<script type="text/javascript" src="/scripts/swup.min.js"></script>
+
+<script type="text/javascript" src="/scripts/swup-setup.js"></script>

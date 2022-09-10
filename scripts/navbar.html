@@ -1,3 +1,4 @@
+<div class="navbarcontainer">
 <div class="navbar selectdiv" id="navbar"><p id="mbtext">Mini Market Mira</p>
 <div id="logo"></div>
 <div class="sccontainer">
@@ -8,9 +9,9 @@
 </div>
 <button id="hamburger" onclick="ToggleMenu()">☰</button>
 </div>
-
+</div>
 <div class="fakebr"></div>
-
+<div class="navmenucontainer" id="navmenucontainer">
 <div class="unknown" id="navmenu">
   <center><div class="top"><p>Navigation</p></div></center><br>
   <center>
@@ -19,6 +20,16 @@
   <a href="/register.html">Register</a><br>
   <a href="#" onclick="leave()">Exit</a>
   <br>
+  </div>
   
   </center>
+</div>
+<div class="notification" id="notification">
+  <div class="icon"></div>
+  <button onclick="closenotify(this.parentNode.id)">X</button>
+  <p class="notiftitle">Error</p>
+  <hr>
+  <p class="notiftext">If you are seeing this, you are probably just messing around with the code :)</p>
+  <div class="progressdiv"><div class="notifyprogress"></div>
+  </div>
 </div>
