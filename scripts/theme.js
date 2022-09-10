@@ -14,14 +14,26 @@ function getCookie(cname) {
   }
   return "";
 }
+//Section: Welcome text//
+if (document.getElementById("welcome") != null) {
+  let text = document.getElementById("welcome")
+  if (getCookie("visited") == "yes") {
+    text.innerText = "Welcome Back!"
+  }}
+if (getCookie("visited") == null) {
+  document.cookie="visited=yes"}
 //Section: Theme//
 let dd;
 var checkDone = function() {
   if (menuloaded) {
-    console.log("pointer 1");
-    dd = document.getElementById("themeoption");
-    decideTheme();
+    dd = eid("themeoption");
+    decideTheme()
     clearInterval(interval1);
+  }
+  if (eid("pageissettings")) {
+    theme = getCookie("theme");
+    check = eid(theme + "switch")
+    check.classList.toggle("checktrue")
   }
 }
 const interval1 = setInterval(checkDone, 1);
@@ -32,14 +44,33 @@ function decideTheme() {
     document.cookie = "theme=light"
     location.reload()
   }
+  if (theme == "undefined") {
+    document.cookie = "theme=light"
+    location.reload()
+  }
   ss.href = "../graphics/"+theme+"-theme.css";
-  if (document.getElementById("pageissettings") != null) {
-    dd.value = theme;
-  };
+}
+var themeselected;
+function lightmode() {
+  var lswitch = eid("lightswitch");
+  var dswitch = eid("darkswitch");
+  lswitch.className = "check checktrue"
+  if (lswitch.className == "check checktrue") {
+    themeselected = "light"
+    dswitch.className = "check"
+  }
+}
+function darkmode() {
+  var lswitch = eid("lightswitch");
+  var dswitch = eid("darkswitch");
+  dswitch.className = "check checktrue"
+  if (dswitch.className == "check checktrue") {
+    themeselected = "dark"
+    lswitch.className = "check"
+  }
 }
 function requestsave() {
-  var value = dd.value;
-  document.cookie = "theme=" + value;
+  document.cookie = "theme=" + themeselected;
   location.reload();
 };
 //Done//

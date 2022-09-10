@@ -1,4 +1,5 @@
 <head>
+  
 <link rel="stylesheet" href="./graphics/text.css">
 
 <link rel="stylesheet" href="./graphics/others.css">
@@ -6,6 +7,8 @@
 <link rel="stylesheet" href="./graphics/navbar.css">
 
 <link rel="stylesheet" id="themestylesheet">
+
+<link rel="stylesheet" href="./graphics/notifications.css">
 
 <title>Mira</title>
 <meta property="og:title" content="Mira Market - Settings" />
@@ -27,24 +30,32 @@
 <div class="ptext">
   <p class="ptitle">Settings</p>
   <br><hr><br>
-  <p>Theme:</p><br>
+  <p style="ptitle">Theme:</p><br>
   <center>
-  <select id="themeoption">
-    <option value="light">Default (Light Mode)</option>
-    <option value="light">Light Mode</option>
-    <option value="dark">Dark Mode</option>
-  </select><br>
-  <br><br><hr><br><br>
-  <button onclick="requestsave()">Save</button>
-  </center>
- <br>
-</div>
+  <div class="dropdown" onclick="ToggleDropdown('themeselector', 'showthemesel')" style="border-radius:0px;"><span>Theme Selector</span>
+  <button id="showthemesel">▼</button>
+  </div>
+  <div id="themeselector" class="containcheck2">
+  <span class="checksize" style="margin:8px">
+  <span class="check" id="lightswitch" onclick="lightmode();"></span>
+  <span style="padding-left:0.35em;"> ▸ Light Mode (default) ◂ </span><br>
+  <span class="checksize">
+  <span class="check" id="darkswitch" onclick="darkmode();"></span>
+  <span style="padding-left:0.35em;"> ▸ Dark Mode ◂ </span>
+  </div>
+  <br><hr><br>
+  <p class="ptitle">Account:</p>
+  <br><hr><br>
+  <input type="submit" value="Save Changes" onclick="requestsave()">
+  
 </main>
 </body>
 
 <script type="text/javascript" src="./scripts/navmenu.js"></script>
 
 <script type="text/javascript" src="./scripts/navload.js"></script>
+
+<script type="text/javascript" src="/scripts/account.js"></script>
 
 <script type="text/javascript" src="./scripts/theme.js"></script>
 

@@ -2,77 +2,162 @@
   opacity:1;
 }
 body {
-  background:#FFFFFF;
+  background:#F8F8F8;
 }
 .selectdiv {
-  background:#FF3030;
-  border:solid 3px #BE2323;
+  background:#B94040;
+  border:solid 3px #8C2D2D;
 }
 .selectdiv p {
   color:white;
 }
 .selectdiv button {
   color:white;
-  background:#BE2323;
+  background:transparent;
 }
 .invertdiv {
-  background:#FFFFFF;
-  border:solid 3px #BE3030;
+  background:#F8F8F8;
+  border:solid 3px #8C2D2D;
 }
 .invertdiv p {
-  color:#FF3030
+  color:#C85050;
 }
 .invertdiv a {
-  color:#BE3030;
-  border:solid 3px #BE3030;
+  color:#C85050;
+  border:solid 3px #8C2D2D;
 }
 #navmenu .top {
-  background:#FF3030;
+  background:#B94040;
 }
 #navmenu .top p {
   color:white;
 }
 .sccontainer {
-  border:solid 12px #BE3030;
+  border:solid 12px #8C2D2D;
   border-top:none;
   border-bottom:none;
 }
 button {
-  background:white;
-  border:#FF3030;
-  color:#FF3030;
+  background:transparent;
+  border:#8C2D2D;
+  color:white;
+}
+#hamburger {
+  border:solid 3px white;
 }
 a {
-  background:white;
-  border:#FF3030;
-  color:#FF3030;
+  color:#FF5A5A;
 }
-p, span {
-  color:#FF3030;
+p, span, label {
+  color:#C85050;
   font-weight:1000;
 }
+.soft {
+  color:#914545;
+}
+.error {
+  color:red;
+  font-weight:400;
+  font-size:1.25rem;
+}
 .ptext select {
-  border:solid 3px #FF3030;
+  border:solid 3px #C85050;
   border-radius:8px;
-  color:#FF3030;
+  color:#C85050;
 }
 .ptext input {
-  border:solid 3px #FF3030;
+  border:solid 3px #C85050;
   border-radius:8px;
-  color:#FF3030;
+  color:#C85050;
 }
 .ptext input::placeholder {
-  color:#FF8888;
+  color:#914545;
+  font-weight:400;
+}
+.ptext a {
+  background:none;
 }
 .ptext button {
-  border:solid 3px #FF3030;
+  border:solid 3px #C85050;
   border-radius:8px;
-  color:#FF3030;
+  color:#C85050;
 }
 hr {
-  background-color:#BE2323;
-  border:solid 1px #BE2323;
+  background-color:#C85050;
+  border:solid 1px #C85050;
+}
+.dropdown {
+  background:#C85050;
+  border:solid 3px #8C2D2D;
+  border-radius:4px;
+}
+.dropdown button {
+  border-color:white;
+  color:white;
+}
+.dropdown span {
+  color:white;
+}
+.check {
+  background: url("../img/l-check-false.png") no-repeat;
+  background-size:1.5em 1.5em;
+}
+.checktrue {
+  background: url("../img/l-check-true.png") no-repeat;
+  background-size:1.5em 1.5em;
+}
+.noncheck {
+  background: url("../img/l-u-check-false.png") no-repeat;
+  background-size:1.5em 1.5em;
+}
+.nchecktrue {
+  background: url("../img/l-u-check-true.png") no-repeat;
+  background-size:1.5em 1.5em;
+}
+.containcheck2 {
+  border:solid 3px #8C2D2D;
+}
+.notfound, .notfound span {
+  color:#FF5050;
+  text-shadow:0 0 1.25rem;
+}
+.flicker {
+  animation:flicker 3s infinite;
+}
+.flicker2 {
+  animation:flicker2 3s infinite;
+}
+
+@keyframes flicker {
+  10% {filter:brightness(85%);}
+  15% {filter:brightness(90%);}
+  20% {filter:brightness(75%);}
+  21% {filter:brightness(100%);}
+  27% {filter:brightness(75%);}
+  35% {filter:brightness(100%);}
+  40% {filter:brightness(70%);}
+  60% {filter:brightness(65%);}
+  61% {filter:brightness(70%);}
+  67% {filter:brightness(71%);}
+  74% {filter:brightness(80%);}
+  85% {filter:brightness(85%);}
+  86% {filter:brightness(75%);}
+  95% {filter:brightness(100%);}
+}
+@keyframes flicker2 {
+  40% {filter:brightness(100%);}
+  41% {filter:brightness(70%);}
+  45% {filter:brightness(100%);}
+  80% {filter:brightness(100%);}
+  81% {filter:brightness(70%);}
+  85% {filter:brightness(100%);}
+  95% {filter:brightness(100%);}
+  96% {filter:brightness(70%);}
+  100% {filter:brightness(100%);}
 }
 button:active {
-  background-color: #DB8585;
+  background-color:#EB8C8C;
+}
+.ptext a:active {
+  color:#8C2D2D;
 }
