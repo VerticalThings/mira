@@ -1,6 +1,4 @@
-* {
-  opacity:0;
-}
+
 button {
   outline:none;
 }
@@ -40,6 +38,7 @@ label {
   outline:none;
   cursor:pointer;
   text-overflow:ellipsis;
+  border:none
 }
 input, label {
   display:block;

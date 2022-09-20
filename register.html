@@ -32,12 +32,12 @@
   <center>
    <form id="registform" action="http://127.0.0.1:5000/miramarket/api/register" method="POST" target="post">
   <label for="email" class="error" id="emailerror">Error: Invalid Email</label>
-  <input type="text" placeholder="Email (user@example.com)" name="email"><br style="clear:both;">
+  <input type="text" placeholder="⌨ Email (user@example.com)" name="email"><br style="clear:both;">
   <label for="username" class="error" id="usernameerror">Error: Invalid Username</label>
-  <input type="text" placeholder="Username" name="username" id="username" onchange="checkAllowed();"
+  <input type="text" placeholder="⌨ Username" name="username" id="username" onchange="checkAllowed();"
 onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"><br style="clear:both;">
     <label for="password" class="error" id="passworderror">Error: Invalid Password</label>
-  <input type="password" placeholder="Password" name="password" id="password" onchange="checkAllowed();"
+  <input type="password" placeholder="⌨ Password" name="password" id="password" onchange="checkAllowed();"
 onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/><br>
   <div class="containcheck">
   <span class="checksize">
@@ -78,9 +78,8 @@ onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"
   </div></div>
   <br>
 
-  <br>
-  <br><br><hr><br><br>
-  <input form="registform" type="submit" value="Register" id="register" disabled>
+  <br><hr><br>
+  <input form="registform" type="submit" value="Register" id="register" onclick="notify('Form Submitted', 'Waiting for Response...')" disabled>
   <br><br><p>Already have an account?</p><br><a href="/login.html">Login Instead</a>
   </center>
  <br>

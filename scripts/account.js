@@ -3,7 +3,7 @@ noerror("all")
 function isSpecial(str, unwantednum, unwantedspace) {
   var specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~\s]/;
   if (unwantednum == true) {
-    specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~1-9]/;
+    specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~0-9]/;
   }
   if (unwantedspace == true) {
     var space = /[\s]/
@@ -115,6 +115,17 @@ function ToggleDropdown(element, button) {
   }
 }
 function noerror(type) {
+  if (eid("pageislogin")) {
+    label = type.trim() + "error"
+  if (type == "all") {
+    var username = eid("usernameerror")
+    var password = eid("passworderror")
+    username.className = "error unknown"
+    password.className = "error unknown"
+  } else {
+    label.className = "error unknown"
+  }
+  }
   if (eid("pageisregister") == null) {
     return
   }
@@ -149,7 +160,7 @@ window.addEventListener("message", (event) => {
   if (event.origin !== "http://127.0.0.1:5000") {
     return
   }
-  console.log("got through")
-  console.log(event.data)
+  returned = JSON.parse(event.data);
+  notify(returned["title"], returned["message"])
   
 }, false);

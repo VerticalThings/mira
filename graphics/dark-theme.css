@@ -1,4 +1,4 @@
-* {
+  * {
   opacity:1;
 }
 body {
@@ -52,6 +52,9 @@ p, span, label {
   color:white;
   font-weight:1000;
 }
+.navmenuex i {
+  color:white;
+}
 .soft {
   color:gray;
 }
@@ -65,7 +68,14 @@ p, span, label {
   border-radius:8px;
   color:white;
 }
-.ptext input {
+.ptext input[type=text], input[type=password] {
+  border-bottom:solid 3px #676767;
+  color:white;
+  border-top-left-radius:8px;
+  border-top-right-radius:8px;
+  background:#0C0C0C
+}
+.ptext input[type=submit] {
   border:solid 3px #676767;
   border-radius:8px;
   color:white;
@@ -92,6 +102,24 @@ hr {
 }
 .containcheck2 {
   border:solid 3px #676767;
+}
+.notification {
+  background:#676767;
+}
+.notification p {
+  color:white;
+}
+.notification button {
+  background:red;
+}
+.notification button:active {
+  background:darkred
+}
+.progressdiv {
+  background:grey;
+}
+.progressdiv div {
+  background:darkslateblue;
 }
 button:active {
   background-color:#777;

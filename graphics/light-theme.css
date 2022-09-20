@@ -26,10 +26,10 @@ body {
   color:#C85050;
   border:solid 3px #8C2D2D;
 }
-#navmenu .top {
+.navmenu .top {
   background:#B94040;
 }
-#navmenu .top p {
+.navmenu .top p {
   color:white;
 }
 .sccontainer {
@@ -51,6 +51,9 @@ a {
 p, span, label {
   color:#C85050;
   font-weight:1000;
+}
+.navmenuex i {
+  color:#C85050;
 }
 .soft {
   color:#914545;
@@ -127,7 +130,25 @@ hr {
 .flicker2 {
   animation:flicker2 3s infinite;
 }
-
+.notification {
+  background:#B94040;
+}
+.notification p {
+  color:white;
+}
+.notification button {
+  color:white;
+  border:solid 3px #8C2D2D;
+}
+.progressdiv {
+  background:#8C2D2D;
+}
+.progressdiv div {
+  background:lightcoral;
+}
+.notification button:active {
+  background:darkred
+}
 @keyframes flicker {
   10% {filter:brightness(85%);}
   15% {filter:brightness(90%);}

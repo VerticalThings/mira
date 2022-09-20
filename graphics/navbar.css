@@ -1,23 +1,19 @@
-.navbarcontainer {
-  position:fixed;
-  width: calc(100vw - 6px);
-  height:6%;
-  min-height:64px;
-  max-height:78px;
-  z-index:999;
-}
 html, body {
   height:100%;
 }
 .navmenucontainer {
   position:fixed;
   width:100vw;
-  height:100%;
+  height:120vh;
   margin-top:0;
   z-index:10;
 }
 #navmenucontainer {
+  display:flex;
   pointer-events:none;
+  width:100%;
+  right:0;
+  margin-left:auto;
 }
 .navbar {
   height:6%;
@@ -61,52 +57,80 @@ html, body {
   background-size: cover;
 }
 .unknown {
-  display:hidden;
-}
-.fakebr {
-  height:6%;
-  min-height:64px;
-  max-height:78px;
-  width:100%;
-}
-.unknown {
   display:none;
 }
+.fakebr {
+  min-height:64px;
+  max-height:78px;
+  height:6%;
+  width:100%;
+}
 .navmenu {
-  overflow:scroll;
+  overflow:hidden;
+  overflow-y:scroll;
   pointer-events:auto;
   width:45%;
-  height:45%;
-  display:block;
+  height:35%;
   min-height:150px;
-  max-width:400px;
-  max-height:650px;
-  position:absolute;
+  max-width:300px;
+  max-height:500px;
   border:solid 3px;
   border-bottom-left-radius:32px;
-  margin-top:3.5px;
   align-items:center;
   justify-content:center;
-  right:0;
-  animation-name: menustart;
-  animation-duration:1s;
+  top:-3.5px;
   z-index:100;
+  transition:right ease-in;
+  transition-duration:1s;
+  position:absolute;
+  right:-70%;
+}
+.navmenu.open {
+  right:0;
+  transition:right ease-out;
+  transition-duration:1s;
 }
 .navmenu a {
   width:85%;
   height:calc(3.5vh + 8vw);
-  font-size:clamp(16px, 4vw, 32px);
   font-weight:1000;
-  max-height:75px;
+  max-height:50px;
   display:flex;
-  color:white;
+  color:transparent;
   border:solid 3px;
   border-radius:4px;
   background:none;
   align-items:center;
-  justify-content:center;
+  padding-left:6px;
   text-decoration:none;
+  overflow:scroll;
   font-weight:1000;
+}
+.navmenuex {
+  width:15%;
+  max-width:100px;
+  height:20%;
+  min-height:125px;
+  max-height:250px;
+  top:-3.5px;
+  border-bottom-left-radius:32px;
+  position:absolute;
+  right:calc(min(45%, 300px) + 3px - 70%);
+  transition:right ease-in;
+  transition-duration:1s;
+  pointer-events:auto;
+}
+.navmenuex.open {
+  right:calc(min(45%, 300px) + 3px);
+  transition:right ease-out;
+  transition-duration:1s;
+}
+.profilepic {
+  margin-top:20%;
+  background: url("../img/default-user.png") no-repeat;
+  background-size:90%, 90%;
+  transform: translate(4.5%, 0);
+  height:35%;
 }
 .navmenu p {
   font-weight: 1000;
@@ -132,27 +156,9 @@ html, body {
   width:100%;
   vertical-align:middle;
 }
-.hiddenmenu {
-  animation-name: menustop;
-  animation-duration:1s;
-}
-@keyframes menustart {
-  from {
-    opacity:0;
-    margin-right:-100%;
-  }
-  to {
-    opacity:1;
-  }
-}
-@keyframes menustop {
-  from {
-    opacity:1;
-  }
-  to {
-    margin-right:-100%;
-    opacity:0;
-  }
+.navmenuex i {
+  font-size:2rem;
+  width:100%;
 }
 .sccontainer {
   height:100%;
@@ -187,14 +193,20 @@ html, body {
   }
 }
 @media (max-height: 250px) {
-  .navbar {
-    max-height:32px;
-  }
   #navmenu {
     height:50%;
+    max-width:170px;
+  }
+  .navmenuex {
+    max-width:50px;
+    height:20%;
+  }
+  .navmenuex.open {
+    right:calc(170px + 3px);
   }
   
 }
+
 @media (min-width: 700px) {
   #mbtext {
     font-size:175%;
@@ -206,25 +218,29 @@ html, body {
 }
 
 @media (min-width: 800px) {
+  #navmenu {
+    width:15%;
+  }
+  .navmenuex {
+    width:5%;
+  }
+  .navmenuex.open {
+    right:calc(min(15%, 250px) + 3px);
+  }
+}
+@media (min-height: 600px) and (min-width:400px) {
+  #navmenu {
+    height:15%;
+  }
+  .navmenuex {
+    height:5%;
+  } 
+}
+@media (min-height: 300px) and (min-width:900px) {
   .navmenu {
-    width:35%;
-    height:30%;
+    height:60%;
+  }
+  .navmenuex {
+    height:5%;
+  } 
 }
-  .navmenu a {
-    font-size:200%;
-    width:90%;
-}
-  .navmenu p {
-    font-size:145%;
-}
-  .hiddenmenu {
-    width:35%;
-    height:30%;
-}
-  .hiddenmenu a {
-    font-size:200%;
-    width:90%;
-}
-  .hiddenmenu p {
-    font-size:145%;
-}}

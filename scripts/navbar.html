@@ -1,24 +1,27 @@
-<div class="navbarcontainer">
+
 <div class="navbar selectdiv" id="navbar"><p id="mbtext">Mini Market Mira</p>
 <div id="logo"></div>
 <div class="sccontainer">
 <center>
-<a href="../">Home</a>
-<a href="../settings.html">Settings</a>
+<a href="/">Home</a>
+<a href="/settings.html">Settings</a>
 </center>
 </div>
-<button id="hamburger" onclick="ToggleMenu()">☰</button>
-</div>
+<button id="hamburger" onclick="ToggleMenu()"><i class="icon-bars" id="navmenubtntext"></i></button>
 </div>
 <div class="fakebr"></div>
 <div class="navmenucontainer" id="navmenucontainer">
-<div class="unknown" id="navmenu">
+<div class="unknown navmenuex invertdiv" id="navmenuex">
+  <div class="profilepic"><br><br><br><br><br><br>
+  <center><i class="icon-gear" class="select"></i></center>
+  </div></div>
+<div class="unknown invertdiv navmenu" id="navmenu">
   <center><div class="top"><p>Navigation</p></div></center><br>
   <center>
-  <a href="/index.html">Home</a><br>
-  <a href="/settings.html">Settings</a><br>
-  <a href="/register.html">Register</a><br>
-  <a href="#" onclick="leave()">Exit</a>
+  <a href="/index.html"><i class="icon-house"></i>&nbsp Home</a><br>
+  <a href="/settings.html"><i class="icon-gear"></i>&nbsp Settings</a><br>
+  <a href="/register.html"><i class="icon-user"></i>&nbsp Register</a><br>
+  <a href="#" onclick="leave()"><i class="icon-leave"></i>&nbsp Exit</a>
   <br>
   </div>
   
@@ -26,10 +29,12 @@
 </div>
 <div class="notification" id="notification">
   <div class="icon"></div>
-  <button onclick="closenotify(this.parentNode.id)">X</button>
-  <p class="notiftitle">Error</p>
+  <p class="count">(1)</p>
+  <button class="icon-xmark" onclick="closeNotify(this.parentNode.id)"></button>
+  <p class="icon-bell" style="position:fixed"></p>
+ <p class="title" style="margin-left:25px">sample title?</p>
   <hr>
-  <p class="notiftext">If you are seeing this, you are probably just messing around with the code :)</p>
-  <div class="progressdiv"><div class="notifyprogress"></div>
+  <p class="message">yes, sample title, and sample text too</p>
+  <div class="progressdiv"><div class="progress"></div>
   </div>
 </div>
